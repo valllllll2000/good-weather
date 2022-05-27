@@ -2,6 +2,7 @@ package org.asdtm.goodweather;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Intent;
@@ -16,11 +17,9 @@ import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
-import android.support.design.widget.Snackbar;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.util.TypedValue;
@@ -34,6 +33,8 @@ import org.asdtm.goodweather.service.NotificationService;
 import org.asdtm.goodweather.utils.Constants;
 
 import java.util.List;
+
+import com.google.android.material.snackbar.Snackbar;
 
 public class SettingsActivity extends AppCompatPreferenceActivity {
 

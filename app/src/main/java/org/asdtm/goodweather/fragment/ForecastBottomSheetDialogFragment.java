@@ -1,19 +1,21 @@
 package org.asdtm.goodweather.fragment;
 
+import android.annotation.SuppressLint;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.BottomSheetDialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import androidx.annotation.Nullable;
 
 import org.asdtm.goodweather.R;
 import org.asdtm.goodweather.model.WeatherForecast;
 import org.asdtm.goodweather.utils.Utils;
 
 import java.util.Locale;
+
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 public class ForecastBottomSheetDialogFragment extends BottomSheetDialogFragment {
 
@@ -33,8 +35,11 @@ public class ForecastBottomSheetDialogFragment extends BottomSheetDialogFragment
         mWeather = (WeatherForecast) getArguments().getSerializable("weatherForecast");
     }
 
+    @SuppressLint("StringFormatInvalid")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
+
+        String snow = getString(R.string.snow_label, mWeather.getSnow(), "");
         View v = inflater.inflate(R.layout.fragment_forecast_bottom_sheet, parent, false);
 
         String speedScale = Utils.getSpeedScale(getActivity());
@@ -69,7 +74,6 @@ public class ForecastBottomSheetDialogFragment extends BottomSheetDialogFragment
         String windDirection = Utils.windDegreeToDirections(getActivity(),
                                                             Double.parseDouble(windDegree));
         String rain = getString(R.string.rain_label, mWeather.getRain(), mmLabel);
-        String snow = getString(R.string.snow_label, mWeather.getSnow(), mmLabel);
         String pressure = getActivity().getString(R.string.pressure_label, mWeather.getPressure(), pressureMeasurement);
         String humidity = getActivity().getString(R.string.humidity_label, mWeather.getHumidity(), percentSign);
 

@@ -3,8 +3,8 @@ package org.asdtm.goodweather.service;
 import android.app.IntentService;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import org.asdtm.goodweather.ConnectionDetector;
 import org.asdtm.goodweather.utils.AppPreference;

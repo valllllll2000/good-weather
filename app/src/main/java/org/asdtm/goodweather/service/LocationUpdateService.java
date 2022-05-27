@@ -16,7 +16,7 @@ import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Looper;
-import android.support.v4.content.ContextCompat;
+import androidx.core.content.ContextCompat;
 import android.util.Log;
 
 import org.asdtm.goodweather.utils.Constants;

@@ -6,7 +6,7 @@ import com.google.gson.reflect.TypeToken;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import android.support.v4.content.ContextCompat;
+import androidx.core.content.ContextCompat;
 
 import org.asdtm.goodweather.R;
 import org.asdtm.goodweather.model.Weather;
